@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 
 import cucumber.api.java.en.*;
 import pageObjects.LoginPage;
@@ -9,11 +10,13 @@ import pageObjects.LoginPage;
 public class Steps {
 	
 	protected static WebDriver driver;
+	public LoginPage lp;
 	
 	@Given("^I launch Chrome Browser$")
 	public void i_launch_Chrome_Browser() throws Exception {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\patil\\Desktop\\Programs\\Projects\\nopCommerce\\Drivers\\chromedriver.exe");  
 		driver=new ChromeDriver();
+		lp = new LoginPage(driver);
 		driver.manage().window().maximize();
 	}
 
@@ -37,7 +40,7 @@ public class Steps {
 
 	@When("^I click login$")
 	public void i_click_login() throws Exception {
-	    LoginPage.login.click();
+	    LoginPage.loginButton.click();
 	}
 
 	@Then("^Page title should be \"([^\"]*)\"$")
