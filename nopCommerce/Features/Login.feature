@@ -4,10 +4,10 @@ Feature: Login
 
   @tag1
   Scenario: Title of your scenario
-    Given I launch Chrome Browser
-    When I open URL "https://admin-demo.nopcommerce.com/login"
-    And I enter Email as "admin@yourstore.com" and password as "admin"
-    And I click login
+    Given User Launches Chrome Browser
+    When User open URL "https://admin-demo.nopcommerce.com/login"
+    And User enter Email as "admin@yourstore.com" and password as "admin"
+    And User click login
     Then Page title should be "Dashboard / nopCommerce administration"
     When I click logout
     Then Page title should be "Your store. Login"
