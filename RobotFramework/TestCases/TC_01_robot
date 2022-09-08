@@ -1,4 +1,5 @@
 *** Settings ***
+Library  SeleniumLibrary
 
 
 
@@ -7,7 +8,13 @@
 
 
 *** Test Cases ***
-
-
+LoginTest
+    create webDriver    CHROME executable_path = "C:\Users\patil\Desktop\Programs\Projects\RobotFramework\Drivers\chromedriver.exe"
+    open browser    https://demo.nopcommerce.com/   chrome
+    click link      xpath://a[contains(text(),'Log in')]
+    input text      xpath://input[@id='Email']      patilvilas97@gmail.com
+    input text      xpath://input[@id='Password']   Vil@s123
+    click element   xpath://button[contains(text(),'Log in')]
+    close browser
 
 *** Keywords ***
