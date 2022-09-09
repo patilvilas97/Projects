@@ -9,7 +9,7 @@ Library  SeleniumLibrary
 
 *** Test Cases ***
 LoginTest
-    create webDriver    Chrome      executable_path= "C:\Users\patil\AppData\Roaming\Python\Python310\Scripts\chromedriver.exe"
+#    create webDriver    Chrome      executable_path= "C:\Users\patil\AppData\Roaming\Python\Python310\Scripts\chromedriver.exe"
     open browser    https://demo.nopcommerce.com/       chrome
     click link      xpath://a[contains(text(),'Log in')]
     input text      xpath://input[@id='Email']          patilvilas97@gmail.com
