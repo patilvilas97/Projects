@@ -20,10 +20,7 @@ Click Login
     click button    ${login_Button}
 
 Verify Successful Login
-    title should be : "nopCommerce demo store"
+    Title Should Be  Dashboard / nopCommerce administration
 
 Close Browser
-    close browser
-
-Click Login Link
-    click element       ${login_Link}
+    Close Window

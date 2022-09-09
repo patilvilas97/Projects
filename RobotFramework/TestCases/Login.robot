@@ -4,14 +4,13 @@ Resource    ../Resources/LoginKeyword.robot
 
 *** variables ***
 ${Browser}      Chrome
-${SiteURL}      https://demo.nopcommerce.com/
-${userName}     patilvilas97@gmail.com
-${Password}     Vil@s123
+${SiteURL}      https://admin-demo.nopcommerce.com/login
+${userName}     admin@yourstore.com
+${Password}     admin
 
 *** Test Cases ***
 Login Test
     Open My Browser     ${SiteURL}      ${Browser}
-    Click Login Link
     Enter UserName      ${userName}
     Enter Password      ${Password}
     Click Login
