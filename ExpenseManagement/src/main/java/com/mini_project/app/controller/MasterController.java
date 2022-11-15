@@ -10,6 +10,7 @@ public class MasterController {
 	@RequestMapping(value="/")
 	public ModelAndView home() {
 		ModelAndView mav = new ModelAndView("home");
+		mav.addObject("message", "list of expenses");
 		return mav;
 	}
 }
