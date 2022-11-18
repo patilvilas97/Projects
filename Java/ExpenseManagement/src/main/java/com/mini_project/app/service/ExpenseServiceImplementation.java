@@ -10,7 +10,7 @@ import com.mini_project.app.repository.ExpenseRepository;
 
 @Service
 public class ExpenseServiceImplementation implements ExpenseService {
- 
+
 	@Autowired
 	ExpenseRepository expenseRepository;
 	
